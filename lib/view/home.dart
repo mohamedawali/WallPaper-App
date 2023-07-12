@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:wallpaper_task/provider/HomeProvider.dart';
 import 'package:wallpaper_task/view/wallpaperDetails.dart';
 
-import '../models/randomResponse.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -35,14 +33,16 @@ class _HomeState extends State<Home> {
                      ),
                   itemBuilder: (context, index) => InkWell(onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>
-                        WallPaperDetails( myData.photosList[index])));},
+                        WallPaperDetails( myData.photosList[index],index)));},
                     child: Card(
 
                               child:
-                              Image.network(
-                                myData.photosList[index].src!.original.toString(),
-                                fit: BoxFit.cover,width: MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height ,
+                              Hero(tag: "image$index",
+                                child: Image.network(
+                                  myData.photosList[index].src!.original.toString(),
+                                  fit: BoxFit.cover,width: MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height ,
 
+                                ),
                               )
 
                         ),
