@@ -27,4 +27,4 @@
 ![search](https://github.com/mohamedawali/wallPaper_task/assets/103155342/cd2b2313-c761-45d4-b125-47c4ffe8b981)
 
 ## favorite
-![fav](https://github.com/mohamedawali/wallPaper_task/assets/103155342/95904384-71e6-4e63-9ff0-387ce20ba722)## cart
+![fav](https://github.com/mohamedawali/wallPaper_task/assets/103155342/95904384-71e6-4e63-9ff0-387ce20ba722)
